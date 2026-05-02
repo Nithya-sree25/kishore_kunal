@@ -35,7 +35,7 @@ function Contact() {
 
       <div className="card">
         <h3>🎓 Google Scholar</h3>
-        <a href="#" className="btn">View Profile →</a>
+        <a href="https://example.com" className="btn">View Profile →</a>
       </div>
 
       {/* FORM */}
