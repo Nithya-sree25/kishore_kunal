@@ -1,0 +1,189 @@
+.about {
+  padding: 60px 20px;
+  background: #f4f7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+.about-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-header img {
+  width: 250px;
+  height: 250px;
+  border-radius: 40%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  color: #0A192F;
+}
+
+/* CARD STYLE */
+.about-card {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.about-card h2 {
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin-left: 10px;
+  
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 45px; /* stops before last item */
+  width: 3px;
+  background: #2b6cb0;
+  
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:last-child::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  bottom: -10px;
+  width: 3px;
+  height: 0;
+  background: transparent;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background: #2b6cb0;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.content h4 {
+  margin: 0;
+  color: #0A192F;
+}
+
+.content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.skills-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.skill-box {
+  background: #f1f5fb;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #2b6cb0;
+  transition: 0.3s;
+}
+
+.skill-box h4 {
+  margin-bottom: 5px;
+  color: #2b6cb0;
+}
+
+.skill-box p {
+  color: #444;
+  font-size: 14px;
+}
+
+/* Hover effect 🔥 */
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: #2b6cb0;
+}
+
+.skill-box:hover h4,
+.skill-box:hover p {
+  color: white;
+}
+.personal-details {
+  margin-top: 10px;
+}
+
+.personal-details p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-left: 30px;
+}
+
+/* optional subtle highlight */
+.personal-details strong {
+  color: #1a5089;
+}
+.membership-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.membership-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+  position: relative;
+  padding-left: 10px;
+ 
+  transition: 0.3s;
+}
+.extra-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.extra-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* style numbers */
+.extra-list li::marker {
+  font-weight: bold;
+  color: #161617;
+}
+.about-container p {
+  text-align: justify;
+  line-height: 1.8;
+}

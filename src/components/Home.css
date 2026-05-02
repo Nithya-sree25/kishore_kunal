@@ -1,0 +1,89 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 60px;
+  background: #f2f2f2;
+  min-height: 90vh;
+  gap: 40px;
+  height: calc(100vh - 70px); /* subtract navbar height */
+  overflow: hidden;
+}
+
+.home-left {
+  max-width: 50%;
+}
+
+.intro {
+  font-size: 22px;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.roles {
+  color: #2b6cb0;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.connect-btn {
+  padding: 12px 25px;
+  background: rgb(217, 212, 212);
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.connect-btn:hover {
+  background: #1e4f8a;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+}
+
+.stats h2 {
+  font-size: 28px;
+}
+
+.stats p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* RIGHT IMAGE */
+.home-right img {
+  width: 350px;   /* slightly reduced */
+  height: 350px;
+  object-fit: cover;
+  border: 5px solid #cabcbc;
+  
+}
+.home-left {
+  margin-top: 30px;
+   margin-left: 30px;
+}
+.home-right {
+    margin-top: 40px;
+  flex: 1;
+  display: flex;
+  justify-content: center; /* CENTER instead of pushing right */
+}
+.home-left p {
+  text-align: justify;
+}

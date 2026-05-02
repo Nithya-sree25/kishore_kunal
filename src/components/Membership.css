@@ -1,0 +1,103 @@
+.membership {
+  padding: 60px 20px;
+  background: #f4f7fb;
+  text-align: center;
+}
+
+.membership-title {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #2d3748;
+}
+
+/* GRID (2 per row) */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARD STYLE */
+.membership-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.membership-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.membership-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* HOVER EFFECT 🔥 */
+.membership-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* TOP ADS SECTION */
+.top-ads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  border: 1px solid #ccc;
+}
+
+/* EACH BOX */
+.ad-box {
+  padding: 15px;
+  background: #f8f8f8;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+
+.ad-box:last-child {
+  border-right: none;
+}
+
+.ad-box img {
+  max-width: 180px;
+  margin-bottom: 15px;
+}
+
+.ad-box p {
+  font-size: 14px;
+  color: #333;
+}
+
+.ad-box a {
+  font-size: 16px;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* HOVER EFFECT */
+.ad-box:hover {
+  background: #eef3ff;
+}
+.ad-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a0dab;
+  text-decoration: underline;
+  font-size: 14px;
+  word-break: keep-all; /* prevents breaking */
+}
