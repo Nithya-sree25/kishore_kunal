@@ -36,7 +36,7 @@ function Scopus() {
 
               <button
                 className="pdf-btn"
-                onClick={() => window.open(item.pdf, "_blank")}
+                onClick={() => window.location.href = item.pdf}
               >
                 View PDF
               </button>

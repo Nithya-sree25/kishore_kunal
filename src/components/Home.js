@@ -12,42 +12,30 @@ function Home() {
       <div className="home-left">
         <p className="intro">Hi there 👋, I'm</p>
 
-        <h1 className="name">Dr.VAIRAVEL MADESHWAREN</h1>
+        <h1 className="name">Dr.KISHORE KUNAL</h1>
+        <div className="mobile-image">
+          <img src={profile} alt="profile" />
+        </div>
 
         <h3 className="roles">
-          Researcher | Author 
+          Professor 
         </h3>
 
         <p className="description">
-          A seasoned professional with 15+ years of experience in mechanical design, CFD, welding technology, and renewable energy, combining strong academic and industry expertise. Began as a sheet metal designer and later transitioned into academia, serving as Assistant and Associate Professor. Holds dual Ph.D. degrees in Mechanical Engineering and Welding Technology, along with management studies. Currently works as an Associate Professor and Visiting Faculty, actively contributing to research, mentoring, and industry collaboration.
+         I am a senior academic leader with 21 years of experience in higher education and digital learning. Expertise in 
+strategic planning, curriculum innovation, and industry collaboration. An accomplished researcher with 35+ 
+publications and proven doctoral supervision, having mentored 20 scholars, contributing to institutional growth and 
+accreditation-driven quality enhancement
         </p>
 
          <button 
           className="connect-btn"
           onClick={() => navigate("/contact")}
         >
-          Let’s Connect
+          Let's get together
         </button>
 
-        {/* STATS */}
-        {/* <div className="stats">
-          <div>
-            <h2>15+</h2>
-            <p>Years of Experience</p>
-          </div>
-          <div>
-            <h2>150+</h2>
-            <p>Publications</p>
-          </div>
-          <div>
-            <h2>20+</h2>
-            <p>Awards</p>
-          </div>
-          <div>
-            <h2>10+</h2>
-            <p>Memberships</p>
-          </div>
-        </div> */}
+        
       </div>
 
       {/* RIGHT SIDE */}

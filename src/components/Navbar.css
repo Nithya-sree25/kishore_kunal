@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(217, 212, 212);
+  background: rgb(205, 238, 245);
 color: #0A192F;
 border-bottom: 1px solid #e2e8f0;
   padding: 15px 20px;
@@ -13,10 +13,12 @@ border-bottom: 1px solid #e2e8f0;
 
 .logo {
   font-size: 20px;
+  margin-left: 30px;
 }
 
 /* MENU */
 .nav-links {
+  
   display: flex;
   list-style: none;
   gap: 20px;

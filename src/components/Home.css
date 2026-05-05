@@ -1,23 +1,31 @@
+/* GLOBAL RESET */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* MAIN CONTAINER */
 .home {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 60px;
-  background: #f2f2f2;
-  min-height: 90vh;
+  background: #f8f7f7;
+  box-sizing: border-box;
   gap: 40px;
-  height: calc(100vh - 70px); /* subtract navbar height */
-  overflow: hidden;
 }
 
+/* LEFT CONTENT */
 .home-left {
   max-width: 50%;
+  margin-top: 30px;
 }
 
 .intro {
   font-size: 22px;
   color: #555;
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 5px;
 }
 
@@ -36,11 +44,13 @@
   color: #444;
   line-height: 1.6;
   margin-bottom: 25px;
+  text-align: justify;
 }
 
+/* BUTTON */
 .connect-btn {
   padding: 12px 25px;
-  background: rgb(217, 212, 212);
+  background: rgb(167, 235, 229);
   color: black;
   border: none;
   cursor: pointer;
@@ -49,41 +59,81 @@
 }
 
 .connect-btn:hover {
-  background: #1e4f8a;
+  background: #ea431e;
 }
 
-.stats {
-  display: flex;
-  gap: 50px;
-}
-
-.stats h2 {
-  font-size: 28px;
-}
-
-.stats p {
-  font-size: 14px;
-  color: #666;
-}
-
-/* RIGHT IMAGE */
-.home-right img {
-  width: 350px;   /* slightly reduced */
-  height: 350px;
-  object-fit: cover;
-  border: 5px solid #cabcbc;
-  
-}
-.home-left {
-  margin-top: 30px;
-   margin-left: 30px;
-}
+/* RIGHT IMAGE (DESKTOP) */
 .home-right {
-    margin-top: 40px;
   flex: 1;
   display: flex;
-  justify-content: center; /* CENTER instead of pushing right */
+  justify-content: center;
 }
-.home-left p {
-  text-align: justify;
+
+.home-right img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 3px solid #cabcbc;
+  border-radius: 10px;
+}
+
+/* MOBILE IMAGE (hidden on desktop) */
+.mobile-image {
+  display: none;
+}
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-left {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* CENTER INTRO */
+  .intro {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* RESPONSIVE NAME */
+  .name {
+    font-size: 30px;
+  }
+
+  /* SHOW IMAGE BELOW NAME */
+  .mobile-image {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .mobile-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* makes it look clean */
+    border: 3px solid #cabcbc;
+  }
+
+  /* HIDE SIDE IMAGE */
+  .home-right {
+    display: none;
+  }
+
+  /* TEXT */
+  .description {
+    text-align: justify;
+  }
+
+  /* BUTTON CENTER */
+  .connect-btn {
+    display: block;
+    margin: 20px auto;
+  }
 }
