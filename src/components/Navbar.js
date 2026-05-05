@@ -83,28 +83,17 @@ function Navbar() {
               </li>
 
               <li>
-                <Link
-                  to="/ugc"
-                  onClick={() => {
-                    setMenuOpen(false);
-                    setOpen(false);
-                  }}
-                >
-                  UGC Journal
-                </Link>
-              </li>
+  <Link
+    to="/abdc"
+    onClick={() => {
+      setMenuOpen(false);
+      setOpen(false);
+    }}
+  >
+    ABDC Journal
+  </Link>
+</li>
 
-              <li>
-                <Link
-                  to="/patent"
-                  onClick={() => {
-                    setMenuOpen(false);
-                    setOpen(false);
-                  }}
-                >
-                  Patent Records
-                </Link>
-              </li>
 
             </ul>
           )}
@@ -116,17 +105,9 @@ function Navbar() {
           </Link>
         </li>
 
-        <li>
-          <Link to="/book" onClick={() => setMenuOpen(false)}>
-            Book
-          </Link>
-        </li>
+       
 
-        <li>
-          <Link to="/membership" onClick={() => setMenuOpen(false)}>
-            Membership
-          </Link>
-        </li>
+        
 
         <li>
           <Link to="/awards" onClick={() => setMenuOpen(false)}>

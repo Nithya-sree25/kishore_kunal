@@ -4,12 +4,13 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Journal from "./components/Journal";
 import Conference from "./components/Conference";
-import Membership from "./components/Membership";
+
 import Awards from "./components/Awards";
 import Events from "./components/Events";
 import Contact from "./components/Contact";
-import Books from "./components/Books";
+import ABDC from "./pages/ABDC";
 import Scopus from "./pages/Scopus";
+import WebOfScience from "./pages/WebOfScience"
 function App() {
   return (
     <Router>
@@ -19,12 +20,13 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/conference" element={<Conference />} />
-        <Route path="/membership" element={<Membership />} />
+        
         <Route path="/awards" element={<Awards />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/book" element={<Books />} />
+        <Route path="/abdc" element={<ABDC />} />
         <Route path="/scopus" element={<Scopus />} />
+        <Route path="/web" element={<WebOfScience />} />
       </Routes>
     </Router>
   );

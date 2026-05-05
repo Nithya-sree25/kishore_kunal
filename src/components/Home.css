@@ -1,4 +1,9 @@
 /* GLOBAL RESET */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,37 +14,42 @@ body {
 .home {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
+  align-items: flex-start; /* 🔥 fixes top spacing */
+  padding: 10px 60px 20px;
   background: #f8f7f7;
   box-sizing: border-box;
   gap: 40px;
+
+  min-height: calc(100dvh - 60px);
 }
 
 /* LEFT CONTENT */
 .home-left {
   max-width: 50%;
-  margin-top: 30px;
 }
 
+/* INTRO */
 .intro {
   font-size: 22px;
   color: #555;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  margin: 0;
+  margin-top: 80px;
 }
 
+/* NAME */
 .name {
   font-size: 50px;
   font-weight: bold;
   margin: 10px 0;
 }
 
+/* ROLE */
 .roles {
   color: #2b6cb0;
   margin-bottom: 20px;
 }
 
+/* DESCRIPTION */
 .description {
   color: #444;
   line-height: 1.6;
@@ -67,6 +77,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
+  margin-top: 80px;
 }
 
 .home-right img {
@@ -89,21 +100,19 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+    justify-content: flex-start;
+    min-height: unset;
   }
 
   .home-left {
     max-width: 100%;
-    margin: 0;
   }
 
-  /* CENTER INTRO */
   .intro {
     font-size: 18px;
-    text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
-  /* RESPONSIVE NAME */
   .name {
     font-size: 30px;
   }
@@ -117,7 +126,7 @@ body {
   .mobile-image img {
     width: 200px;
     height: auto;
-    border-radius: 50%; /* makes it look clean */
+    border-radius: 50%;
     border: 3px solid #cabcbc;
   }
 
@@ -126,12 +135,10 @@ body {
     display: none;
   }
 
-  /* TEXT */
   .description {
     text-align: justify;
   }
 
-  /* BUTTON CENTER */
   .connect-btn {
     display: block;
     margin: 20px auto;

@@ -58,7 +58,7 @@
   position: absolute;
   left: 8px;
   top: 0;
-  bottom: 45px; /* stops before last item */
+  bottom: 75px; /* stops before last item */
   width: 3px;
   background: #2b6cb0;
   
@@ -67,7 +67,7 @@
 .timeline-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .timeline-item:last-child {
   margin-bottom: 0;
@@ -186,4 +186,10 @@
 .about-container p {
   text-align: justify;
   line-height: 1.8;
+}
+
+.teaching {
+  line-height: 1.9;
+  margin-bottom: 15px;
+  text-align: justify;
 }
