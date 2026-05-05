@@ -66,3 +66,34 @@ border-bottom: 1px solid #e2e8f0;
 .nav-links.active {
   box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 }
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f1f1f1;
+}

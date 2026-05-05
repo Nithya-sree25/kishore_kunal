@@ -9,6 +9,7 @@ import Awards from "./components/Awards";
 import Events from "./components/Events";
 import Contact from "./components/Contact";
 import Books from "./components/Books";
+import Scopus from "./pages/Scopus";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<Books />} />
+        <Route path="/scopus" element={<Scopus />} />
       </Routes>
     </Router>
   );

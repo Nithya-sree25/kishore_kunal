@@ -5,7 +5,7 @@ import "./Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef();
-
+  const [open, setOpen] = useState(false);
   // 👉 close when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -34,7 +34,23 @@ function Navbar() {
       >
         <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-        <li><Link to="/journal" onClick={() => setMenuOpen(false)}>Journal</Link></li>
+        <li
+          className="dropdown"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <span className="nav-item">Journal ▾</span>
+
+          {open && (
+            <ul className="dropdown-menu">
+              <li><Link to="/journal#patent">Patent Records</Link></li>
+              <li><Link to="/journal#thomson">Thomson</Link></li>
+              <li><Link to="/scopus">Scopus Journal</Link></li>
+              <li><Link to="/journal#web">Web of Science</Link></li>
+              <li><Link to="/journal#ugc">UGC</Link></li>
+            </ul>
+          )}
+        </li>
         <li><Link to="/conference" onClick={() => setMenuOpen(false)}>Conference</Link></li>
         <li><Link to="/book" onClick={() => setMenuOpen(false)}>Book</Link></li>
         <li><Link to="/membership" onClick={() => setMenuOpen(false)}>Membership</Link></li>

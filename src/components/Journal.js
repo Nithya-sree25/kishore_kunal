@@ -1,37 +1,107 @@
 import React from "react";
 import "./Journal.css";
-
+import { useEffect, useState } from "react";
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 function Journal() {
+     const [journals, setJournals] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const querySnapshot = await getDocs(collection(db, "journals"));
+      const data = querySnapshot.docs.map(doc => doc.data());
+      setJournals(data);
+    };
+
+    fetchData();
+  }, []);
+   const patents = journals.filter(item => item.category === "Patent");
+    const thomson = journals.filter(item => item.category === "Thomson");
   return (
+    
     <section className="journal">
 
       <h1 className="journal-title">Journal of Publications</h1>
-
+        
       {/* PATENTS */}
-      <div className="journal-card">
+      <div id="patent" className="journal-card">
         <h2>Patent Records</h2>
-        <ol>
-          <li>
-           M. Viravel, “An Intelligent Traffic Monitoring and Controling System for Narrow Bridges 
-And Sharp Turns” in the Department of Industrial Policy and Promotion, Ministry of 
-Commerce and Industry, Government of India. (In Final Stage for Authorization), patent No: 
-201941018344, 2019
-          </li>
-          <li>
-            M. Viravel, “Hybrid Solar Dryer And Heating Systems” in the Department of Industrial Policy 
-and Promotion, Ministry of Commerce and Industry, Government of India. (In Final 
-Stage for Authorization), Patent No:201941018824, 2019.
-          </li>
-          <li>
-            R.Pugazhenthi, J.Bensamraj, M.Vairavel, "Commercial Fluid Volumetric Tank
-Leakage Arrestment Mechanism" Indian Patent, Patent No: 201941013785. 2019.
-          </li>
-          <li>
-            R.Manivannan, S.Prabakar, G.Kathiresan, M.Vairavel, "Gsm Based Security Alert System
-Using Piezo Buzzer Plate" Indian Patent, Patent No: 201941013784. 2019
-          </li>
-        </ol>
+        <ol style={{ paddingLeft: "20px" }}>
+  {patents.map((item, index) => (
+   <li
+  key={index}
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "15px"
+  }}
+>
+  <span style={{ flex: 1, textAlign: "justify" }}>
+    <strong style={{ marginRight: "5px" }}>{index + 1}.</strong>
+    {item.author}, {item.title}, {item.year}.
+  </span>
+
+  <button
+    onClick={() => window.open(item.pdf, "_blank")}
+    style={{
+      marginLeft: "10px",
+      backgroundColor: "#e91e63",
+      color: "white",
+      border: "none",
+      padding: "6px 12px",
+      borderRadius: "6px",
+      cursor: "pointer",
+      whiteSpace: "nowrap"
+    }}
+  >
+    View PDF
+  </button>
+</li>
+  ))}
+</ol>       
+        
       </div>
+
+<div id="thomson" className="journal-card">
+        <h2>Thomson Reuters Journals</h2>
+        <ol style={{ paddingLeft: "20px" }}>
+  {thomson.map((item, index) => (
+   <li
+  key={index}
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "15px"
+  }}
+>
+  <span style={{ flex: 1, textAlign: "justify" }}>
+    <strong style={{ marginRight: "5px" }}>{index + 1}.</strong>
+    {item.author}, {item.title}, {item.year}.
+  </span>
+
+  <button
+    onClick={() => window.open(item.pdf, "_blank")}
+    style={{
+      marginLeft: "10px",
+      backgroundColor: "#e91e63",
+      color: "white",
+      border: "none",
+      padding: "6px 12px",
+      borderRadius: "6px",
+      cursor: "pointer",
+      whiteSpace: "nowrap"
+    }}
+  >
+    View PDF
+  </button>
+</li>
+  ))}
+</ol>       
+        
+      </div>
+
 
       {/* THOMSON */}
       <div className="journal-card">
