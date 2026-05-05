@@ -1,3 +1,4 @@
+/* MAIN SECTION */
 .journal {
   padding: 60px 20px;
   background: #f4f7fb;
@@ -6,12 +7,14 @@
   align-items: center;
 }
 
+/* TITLE */
 .journal-title {
   font-size: 36px;
   margin-bottom: 40px;
   color: #0A192F;
 }
 
+/* CARD */
 .journal-card {
   width: 80%;
   max-width: 1000px;
@@ -22,51 +25,72 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
+/* SUB TITLE */
 .journal-card h2 {
   color: #2b6cb0;
   margin-bottom: 15px;
 }
 
+/* LIST */
 .journal-card ol {
   padding-left: 20px;
 }
 
-.journal-card li {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #1a202c;
-  font-weight: 500; /* semi-bold */
-  text-align: justify;
-}
-.journal-container p {
-  text-align: justify;
-  line-height: 1.8;
-}
+/* EACH ITEM */
 .journal-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   margin-bottom: 15px;
 }
 
+/* TEXT */
 .journal-text {
   flex: 1;
   text-align: justify;
+  line-height: 1.7;
+  color: #1a202c;
+  font-weight: 500;
 }
 
+/* BUTTON */
 .pdf-btn {
-  white-space: nowrap;
-  background: #2c5aa0;
+  background: #e91e63;
   color: white;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
-  font-size: 13px;
   cursor: pointer;
+  white-space: nowrap;
   transition: 0.3s ease;
 }
 
 .pdf-btn:hover {
-  background: #1e3f73;
+  background: #c2185b;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .journal-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .journal-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .journal-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pdf-btn {
+    margin-top: 10px;
+    width: 25%;
+    text-align: center;
+  }
 }
