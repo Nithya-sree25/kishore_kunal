@@ -5,7 +5,7 @@ import About from "./components/About";
 import Journal from "./components/Journal";
 import Conference from "./components/Conference";
 import Certification from "./components/Certification";
-import Awards from "./components/Awards";
+
 
 import Contact from "./components/Contact";
 import ABDC from "./pages/ABDC";
@@ -21,7 +21,7 @@ function App() {
         <Route path="/journal" element={<Journal />} />
         <Route path="/conference" element={<Conference />} />
         <Route path="/certification" element={<Certification />} />
-        <Route path="/awards" element={<Awards />} />
+        
         
         <Route path="/contact" element={<Contact />} />
         <Route path="/abdc" element={<ABDC />} />
