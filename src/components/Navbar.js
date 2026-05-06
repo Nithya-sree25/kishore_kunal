@@ -109,17 +109,13 @@ function Navbar() {
 
         
 
-        <li>
-          <Link to="/awards" onClick={() => setMenuOpen(false)}>
-            Awards
-          </Link>
-        </li>
+       <li>
+  <Link to="/certification" onClick={() => setMenuOpen(false)}>
+    Certification
+  </Link>
+</li>
 
-        <li>
-          <Link to="/events" onClick={() => setMenuOpen(false)}>
-            Events
-          </Link>
-        </li>
+        
 
         <li>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>

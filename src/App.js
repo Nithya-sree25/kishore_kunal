@@ -4,9 +4,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Journal from "./components/Journal";
 import Conference from "./components/Conference";
-
+import Certification from "./components/Certification";
 import Awards from "./components/Awards";
-import Events from "./components/Events";
+
 import Contact from "./components/Contact";
 import ABDC from "./pages/ABDC";
 import Scopus from "./pages/Scopus";
@@ -20,9 +20,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/conference" element={<Conference />} />
-        
+        <Route path="/certification" element={<Certification />} />
         <Route path="/awards" element={<Awards />} />
-        <Route path="/events" element={<Events />} />
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="/abdc" element={<ABDC />} />
         <Route path="/scopus" element={<Scopus />} />
